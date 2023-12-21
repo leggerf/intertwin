@@ -1,5 +1,16 @@
 # intertwin
 
+## First time: setup oidc account
+
+- install oidc-agent
+```
+sudo yum install -y oidc-agent-cli
+sudo apt-get install -y oidc-agent-cli
+```
+- 
+```
+```
+
 ## Get openid token and setup env
 
 ```
