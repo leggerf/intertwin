@@ -11,3 +11,9 @@ source ./getToken.sh
 ```
 ./build.sh
 ```
+
+## Run rucio client image and enter bash
+
+```
+./run.sh
+```
