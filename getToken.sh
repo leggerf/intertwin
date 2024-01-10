@@ -19,8 +19,8 @@ export EXPIRES_AT="$(date -d @$(oidc-token egi --expires-at))"
 #for rucio
 
 export RUCIO_CONFIG="/afs/cern.ch/user/l/leggerf/intertwin/rucio.cfg"
-echo $BEARER_TOKEN | tr -cd '[:print:]' > rucio.tkn
-cat rucio.tkn
+echo $BEARER_TOKEN | tr -cd '[:print:]' > /tmp/rucio.tkn
+cat /tmp/rucio.tkn
 
 printf "\n\nExpires at $EXPIRES_AT"
 
