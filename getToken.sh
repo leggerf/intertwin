@@ -13,8 +13,7 @@ eval `oidc-agent`
 # oidc-gen --pub --issuer https://aai-demo.egi.eu/auth/realms/egi --scope=max  --flow=device egi
 
 #oidc-token legger
-export BEARER_TOKEN="$(oidc-token egi --time 3600 --scope 'openid profile offline_access eduperson_entit
-lement')"
+export BEARER_TOKEN="$(oidc-token egi --time 3600 --scope 'openid profile offline_access eduperson_entitlement')"
 export EXPIRES_AT="$(date -d @$(oidc-token egi --expires-at))"
 
 #for rucio
