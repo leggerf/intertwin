@@ -43,6 +43,7 @@ oidc-agent 5.0.1
 - you might need to set ```export OIDC_SOCK=/tmp/oidc-forward```
 
 #### Add identity for EGI authentication
+
 - add *egi* identity with: (NB:  use encryption password "intertwin")
 ```
 eval `oidc-agent`
@@ -60,15 +61,15 @@ source ./getToken.sh
 ```
 gfal-ls davs://xfer-intertwin.cr.cnaf.infn.it:8443/intertwin/virgo
 ```
-- or access the Rucio server at DESY, for example:
+- or access the Intertwin Rucio server at DESY, for example:
 ```
 rucio --config rucio.cfg list-rses
 ```
 
 
-## Use Intertwin Rucio server at DESY
+## Use docker image
 
-### Build rucio client image
+### Build rucio client docker image
 
 ```
 ./build.sh
@@ -79,6 +80,9 @@ rucio --config rucio.cfg list-rses
 ```
 ./run.sh
 ```
+
+- the first time you still need to (setup your egi identity)[#add-identity-for-egi-authentication], necessary to obtain the authorization token
+- then [get the token](#get-openid-token-and-setup-env) to use rucio and gfal commands 
 
 ## Access Virgo resources
 
