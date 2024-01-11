@@ -53,7 +53,10 @@ source ./getToken.sh
 ```
 gfal-ls davs://xfer-intertwin.cr.cnaf.infn.it:8443/intertwin/virgo
 ```
-- or access the Rucio server at DESY
+- or access the Rucio server at DESY, for example:
+```
+rucio --config rucio.cfg list-rses
+```
 
 
 ## Use Intertwin Rucio server at DESY
