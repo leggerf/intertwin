@@ -28,10 +28,10 @@ apt-get update
 ```
 - for RockyLinux/alma run something like (check  [instructions](http://repo.data.kit.edu/) for precise syntax)
  ```
-cd /etc/yum.repos.d; wgethttps://repo.data.kit.edu//data-kit-edu-rockylinux9.repo
+cd /etc/yum.repos.d; wget https://repo.data.kit.edu//data-kit-edu-rockylinux9.repo
+```
+- install 
 ``` 
-``` 
-
 sudo yum install -y oidc-agent-cli
 sudo apt-get install -y oidc-agent-cli
 ```
