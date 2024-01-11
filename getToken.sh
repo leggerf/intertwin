@@ -25,7 +25,7 @@ export EXPIRES_AT="$(date -d @$(oidc-token egi --expires-at))"
 # SETUP for Rucio
 # You will need to edit this to point to your rucio.cfg. You need to specify the ABSOLUTE PATH 
 
-export RUCIO_CONFIG="/afs/cern.ch/user/l/leggerf/intertwin/rucio.cfg"
+export RUCIO_CONFIG="$PWD/rucio.cfg"
 
 echo $BEARER_TOKEN | tr -cd '[:print:]' > /tmp/rucio.tkn
 cat /tmp/rucio.tkn
