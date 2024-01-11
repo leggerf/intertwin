@@ -13,6 +13,7 @@ sudo apt-get install -y oidc-agent-cli
 ```
  oidc-gen --pub --issuer https://aai-demo.egi.eu/auth/realms/egi --scope=max  --flow=device egi
 ```
+- [Documentation](https://indigo-dc.gitbook.io/oidc-agent/)
 
 ### Get openid token and setup env
 
