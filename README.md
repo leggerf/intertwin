@@ -49,6 +49,11 @@ oidc-gen --pub --issuer https://aai-demo.egi.eu/auth/realms/egi --scope=max  --f
 ```
 source ./getToken.sh
 ```
+- This will allow you to have a valid token that can be used to see the storage at CNAF with:
+```
+gfal-ls davs://xfer-intertwin.cr.cnaf.infn.it:8443/intertwin/virgo
+```
+- or access the Rucio server at DESY
 
 
 ## Use Intertwin Rucio server at DESY
