@@ -9,6 +9,7 @@
 sudo yum install -y oidc-agent-cli
 sudo apt-get install -y oidc-agent-cli
 ```
+- you might need to set ```export OIDC_SOCK=/tmp/oidc-forward```
 - add *egi* identity with: (NB:  use encryption password "intertwin")
 ```
  oidc-gen --pub --issuer https://aai-demo.egi.eu/auth/realms/egi --scope=max  --flow=device egi
