@@ -1,3 +1,3 @@
-#cp /etc/ssl/certs/ca-bundle.crt .
+wget -nc https://repo.data.kit.edu//data-kit-edu-rockylinux9.repo
 
 docker build --tag rucio-intertwin .
