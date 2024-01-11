@@ -3,7 +3,7 @@
 ## create virgo proxy
 
 ```
-voms-proxy-init -voms virgo --vomses intertwin/virgo.voms 
+voms-proxy-init -voms virgo --vomses virgo.voms 
 ```
 
 ## First time: setup oidc account
