@@ -1,5 +1,12 @@
 # Intertwin
 
+Needed interactive steps:
+
+- setup identity in oidc-agent
+- get token from egi (password is now hardcoded in file) - solved
+- authorise token with Rucio
+
+
 ## Setup EGI authentication to access Intertwin resources
 
 **NB:** with Ubuntu based distros you cannot install/use gfal commands. Might be better to use [docker image](#build-rucio-client-image) if docker is available on your system.
