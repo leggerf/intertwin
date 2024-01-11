@@ -23,6 +23,7 @@ export BEARER_TOKEN="$(oidc-token egi --time 3600 --scope 'openid profile offlin
 export EXPIRES_AT="$(date -d @$(oidc-token egi --expires-at))"
 
 # SETUP for Rucio
+# You will need to edit this to point to your rucio.cfg. You need to specify the ABSOLUTE PATH 
 
 export RUCIO_CONFIG="/afs/cern.ch/user/l/leggerf/intertwin/rucio.cfg"
 
