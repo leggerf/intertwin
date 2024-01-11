@@ -1,4 +1,4 @@
-# intertwin
+# Intertwin
 
 ## Setup EGI authentication to access Intertwin resources
 
