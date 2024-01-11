@@ -6,15 +6,23 @@
 
 #### install oidc-agent
 
-- If oidc-agent commands are not available on your system, you need to install them
-- add repo from kit, see [instructions](http://repo.data.kit.edu/)
+- If oidc-agent commands are not available on your system, you need to install them. See [instructions](http://repo.data.kit.edu/) 
+- for apt-get based distributions like Ubuntu, add repo from kit
 ```
 sudo su
 curl repo.data.kit.edu/repo-data-kit-edu-key.gpg  | gpg --dearmor > /etc/apt/trusted.gpg.d/kitrepo-archive.gpg
 ```
-- add repo to ```/etc/apt/sources.list``` (for apt-get based distributions like Ubuntu). For RockyLinux/alma run something like cd /etc/yum.repos.d; wget ```https://repo.data.kit.edu//data-kit-edu-rockylinux9.repo```. Check  [instructions](http://repo.data.kit.edu/) for precise syntax.
+- then add repo to
+```
+vi /etc/apt/sources.list
+apt-get update
+```
+- for RockyLinux/alma run something like (check  [instructions](http://repo.data.kit.edu/) for precise syntax)
+ ```
+cd /etc/yum.repos.d; wgethttps://repo.data.kit.edu//data-kit-edu-rockylinux9.repo
 ``` 
-sudo apt-get update
+``` 
+
 sudo yum install -y oidc-agent-cli
 sudo apt-get install -y oidc-agent-cli
 ```
@@ -24,6 +32,8 @@ oidc-agent --version
 oidc-agent 5.0.1
 ```
 - you might need to set ```export OIDC_SOCK=/tmp/oidc-forward```
+
+#### Add identity for EGI authentication
 - add *egi* identity with: (NB:  use encryption password "intertwin")
 ```
 eval `oidc-agent`
