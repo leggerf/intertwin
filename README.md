@@ -1,5 +1,11 @@
 # intertwin
 
+## create virgo proxy
+
+```
+voms-proxy-init -voms virgo --vomses intertwin/virgo.voms 
+```
+
 ## First time: setup oidc account
 
 - install oidc-agent
