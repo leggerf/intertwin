@@ -48,6 +48,8 @@ oidc-gen --pub --issuer https://aai-demo.egi.eu/auth/realms/egi --scope=max  --f
 source ./getToken.sh
 ```
 
+**NB** with ubuntu based distros you cannot install/use gfal commands. Might be better to use [docker image](#build-rucio-client-image) if docker is available
+
 ## Use Intertwin Rucio server at DESY
 
 ### Build rucio client image
