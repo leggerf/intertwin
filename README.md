@@ -65,7 +65,8 @@ gfal-ls davs://xfer-intertwin.cr.cnaf.infn.it:8443/intertwin/virgo
 ```
 rucio --config rucio.cfg list-rses
 ```
-
+- [oidc-agent documentation](https://indigo-dc.gitbook.io/oidc-agent/)
+- [Rucio documentation](https://rucio.cern.ch/documentation/user/setting_up_the_rucio_client)
 
 ## Use docker image
 
@@ -81,7 +82,7 @@ rucio --config rucio.cfg list-rses
 ./run.sh
 ```
 
-- the first time you still need to (setup your egi identity)[#add-identity-for-egi-authentication], necessary to obtain the authorization token
+- the first time you still need to [setup your egi identity](#add-identity-for-egi-authentication), necessary to obtain the authorization token
 - then [get the token](#get-openid-token-and-setup-env) to use rucio and gfal commands 
 
 ## Access Virgo resources
