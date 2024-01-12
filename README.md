@@ -1,12 +1,14 @@
 # Intertwin
 
+## Access Intertwin resources through EGI authentication
+
 You will need to:
 
-- [install the oidc-agent](#install-oidc-agent) if it is not available in your system 
-- [first time setup]((#first-time-add-identity)): create your egi identity for authentication
+- [install the oidc-agent](#install-oidc-agent) if it is not available in your system. **NB:** with Ubuntu based distros you cannot install/use gfal commands. Might be better to use [docker image](#use-docker-image) if docker is available on your system. 
+- [first time setup](#first-time-add-identity): create your egi identity for authentication
 - get valid token
 
-## Access Intertwin resources through EGI authentication
+
 
 ### Setup oidc account
 
@@ -64,13 +66,9 @@ voms-proxy-init -voms virgo --vomses virgo.voms
 ```
 
 
-## Setup EGI authentication to access Intertwin resources
-
-### install oidc-agent
+## Install oidc-agent
 
 If oidc-agent commands are not available on your system, you need to install them. See [instructions](http://repo.data.kit.edu/) 
-
-**NB:** with Ubuntu based distros you cannot install/use gfal commands. Might be better to use [docker image](#build-rucio-client-image) if docker is available on your system.
 
 For apt-get based distributions like Ubuntu, add repo from KIT
 ```
