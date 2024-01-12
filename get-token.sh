@@ -9,13 +9,7 @@
 
 ## Get token from EGI
 
-eval `oidc-agent`
-
-export OIDC_ENCRYPTION_PW="intertwin"
-
-# Identity egi added with:
-# oidc-gen --pub --issuer https://aai-demo.egi.eu/auth/realms/egi --scope=max  --flow=device egi
-# Use encryption password "intertwin" !!!!
+source ./setup.sh
 
 oidc-add egi --pw-env 
 
@@ -23,9 +17,6 @@ export BEARER_TOKEN="$(oidc-token egi --time 3600 --scope 'openid profile offlin
 export EXPIRES_AT="$(date -d @$(oidc-token egi --expires-at))"
 
 # SETUP for Rucio
-# You will need to edit this to point to your rucio.cfg. You need to specify the ABSOLUTE PATH 
-
-export RUCIO_CONFIG="$PWD/rucio.cfg"
 
 echo $BEARER_TOKEN | tr -cd '[:print:]' > /tmp/rucio.tkn
 cat /tmp/rucio.tkn

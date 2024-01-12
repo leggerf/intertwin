@@ -32,5 +32,6 @@ COPY ./userkey.pem /root/.globus/userkey.pem
 ENV OIDC_SOCK=/tmp/oidc-forward
 ENV RUCIO_CONFIG=/root/rucio.cfg
 
-
+WORKDIR /root/
+RUN ./addIdentity.sh
 
