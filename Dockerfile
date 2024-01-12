@@ -22,6 +22,7 @@ RUN yum install -y oidc-agent oidc-agent-cli
 
 # add files
 COPY ./getToken.sh /root/getToken.sh
+COPY ./addIdentity.sh /root/addIdentity.sh
 COPY ./rucio.cfg /root/rucio.cfg
 
 COPY ./virgo.voms /root/virgo.voms
