@@ -1,52 +1,14 @@
 # Intertwin
 
-Needed interactive steps:
+You will need to:
 
-- setup identity in oidc-agent
-- get token from egi (password is now hardcoded in file) - solved
-- authorise token with Rucio
+- [install the oidc-agent](#install-oidc-agent) if it is not available in your system 
+- [first time setup]((#first-time-add-identity)): create your egi identity for authentication
+- get valid token
 
+## Access Intertwin resources through EGI authentication
 
-## Setup EGI authentication to access Intertwin resources
-
-### install oidc-agent
-
-If oidc-agent commands are not available on your system, you need to install them. See [instructions](http://repo.data.kit.edu/) 
-
-**NB:** with Ubuntu based distros you cannot install/use gfal commands. Might be better to use [docker image](#build-rucio-client-image) if docker is available on your system.
-
-For apt-get based distributions like Ubuntu, add repo from KIT
-```
-sudo su
-curl repo.data.kit.edu/repo-data-kit-edu-key.gpg  | gpg --dearmor > /etc/apt/trusted.gpg.d/kitrepo-archive.gpg
-```
-then add repo to
-```
-vi /etc/apt/sources.list
-apt-get update
-```
-
-For RockyLinux/alma run something like (check  [instructions](http://repo.data.kit.edu/) for precise syntax)
- ```
-cd /etc/yum.repos.d; wget https://repo.data.kit.edu//data-kit-edu-rockylinux9.repo
-```
-
-Install with 
-``` 
-sudo yum install -y oidc-agent-cli oidc-agent
-```
-or 
-```
-sudo apt-get install -y oidc-agent-cli  oidc-agent
-```
-Check that the version is at least
-```
-oidc-agent --version
-oidc-agent 5.0.1
-```
-You might need to set ```export OIDC_SOCK=/tmp/oidc-forward```
-
-### setup oidc account
+### Setup oidc account
 
 ### First time: Add identity
 
@@ -100,3 +62,44 @@ Provided you have a valid x509 certificate and belong to [virgo voms](https://vo
 ```
 voms-proxy-init -voms virgo --vomses virgo.voms 
 ```
+
+
+## Setup EGI authentication to access Intertwin resources
+
+### install oidc-agent
+
+If oidc-agent commands are not available on your system, you need to install them. See [instructions](http://repo.data.kit.edu/) 
+
+**NB:** with Ubuntu based distros you cannot install/use gfal commands. Might be better to use [docker image](#build-rucio-client-image) if docker is available on your system.
+
+For apt-get based distributions like Ubuntu, add repo from KIT
+```
+sudo su
+curl repo.data.kit.edu/repo-data-kit-edu-key.gpg  | gpg --dearmor > /etc/apt/trusted.gpg.d/kitrepo-archive.gpg
+```
+then add repo to
+```
+vi /etc/apt/sources.list
+apt-get update
+```
+
+For RockyLinux/alma run something like (check  [instructions](http://repo.data.kit.edu/) for precise syntax)
+ ```
+cd /etc/yum.repos.d; wget https://repo.data.kit.edu//data-kit-edu-rockylinux9.repo
+```
+
+Install with 
+``` 
+sudo yum install -y oidc-agent-cli oidc-agent
+```
+or 
+```
+sudo apt-get install -y oidc-agent-cli  oidc-agent
+```
+Check that the version is at least
+```
+oidc-agent --version
+oidc-agent 5.0.1
+```
+You might need to set ```export OIDC_SOCK=/tmp/oidc-forward```
+
