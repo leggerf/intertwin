@@ -78,6 +78,8 @@ rucio list-rses
 ```
 ./build.sh
 ```
+In the last build step you need to follow the instructions to setup you egi identity.
+This is equivalent to this [step](#add-identity-for-egi-authentication)
 
 ### Run rucio client image and enter bash
 
@@ -85,8 +87,7 @@ rucio list-rses
 ./run.sh
 ```
 
-- the first time you still need to [setup your egi identity](#add-identity-for-egi-authentication), necessary to obtain the authorization token
-- then [get the token](#get-openid-token-and-setup-env) to use rucio and gfal commands 
+-  [get the token](#get-openid-token-and-setup-env) to use rucio and gfal commands 
 
 ## Access Virgo resources
 
