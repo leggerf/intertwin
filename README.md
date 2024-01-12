@@ -48,9 +48,9 @@ You might need to set ```export OIDC_SOCK=/tmp/oidc-forward```
 
 ### First time: setup oidc account
 
-- add *egi* identity with (**NB**  use encryption password "intertwin")
+- add *egi* identity with (**NB**  the hardcoded encryption password "intertwin")
 ```
-./addIdentity.sh
+./add-egi.sh
 ```
 - [Documentation](https://indigo-dc.gitbook.io/oidc-agent/)
 
@@ -58,7 +58,7 @@ You might need to set ```export OIDC_SOCK=/tmp/oidc-forward```
 
 - If egi account is correctly setup, you can just run:
 ```
-source ./getToken.sh
+source ./get-token.sh
 ```
 - This will allow you to have a valid token that can be used to see the storage at CNAF with:
 ```
