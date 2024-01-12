@@ -1,1 +1,1 @@
-docker run -u 0 --rm -it --entrypoint bash rucio-intertwin
+docker run -u 0 -w /root/ --rm -it --entrypoint bash rucio-intertwin

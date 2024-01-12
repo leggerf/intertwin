@@ -12,17 +12,24 @@ RUN yum install -y python3-gfal2 gfal2-plugin-file gfal2-plugin-gridftp gfal2-pl
 # install voms-proxy
 RUN yum install -y voms-clients
 
+# install CA files
+COPY ./egi-trustanchors.repo /etc/yum.repos.d/egi-trustanchors.repo
+RUN yum install -y ca-policy-egi-core
+
 # install oidc-agent
-#RUN yum install -y oidc-agent oidc-agent-cli
+COPY ./data-kit-edu-rockylinux9.repo /etc/yum.repos.d/data-kit-edu-rockylinux9.repo
+RUN yum install -y oidc-agent oidc-agent-cli
 
 # add files
-COPY ./rucio.cfg /home/user/rucio.cfg
-COPY ./virgo.voms /home/user/virgo.voms
-COPY ./getToken.sh /home/user/getToken.sh
-COPY ./data-kit-edu-rockylinux9.repo /etc/yum.repos.d/data-kit-edu-rockylinux9.repo
+COPY ./getToken.sh /root/getToken.sh
+COPY ./rucio.cfg /root/rucio.cfg
+
+COPY ./virgo.voms /root/virgo.voms
+COPY ./usercert.pem /root/.globus/usercert.pem
+COPY ./userkey.pem /root/.globus/userkey.pem
 
 ENV OIDC_SOCK=/tmp/oidc-forward
-ENV RUCIO_CONFIG=/home/user/rucio.cfg
+ENV RUCIO_CONFIG=/root/rucio.cfg
 
 
 
