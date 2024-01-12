@@ -46,9 +46,11 @@ oidc-agent 5.0.1
 ```
 You might need to set ```export OIDC_SOCK=/tmp/oidc-forward```
 
-### First time: setup oidc account
+### setup oidc account
 
-- add *egi* identity with (**NB**  the hardcoded encryption password "intertwin")
+### First time: Add identity
+
+- add *egi* identity with [add-egi.sh](./add-egi.sh) (**NB**  the hardcoded encryption password is "intertwin")
 ```
 ./add-egi.sh
 ```
@@ -79,7 +81,7 @@ rucio list-rses
 ./build.sh
 ```
 In the last build step you need to follow the instructions to setup you egi identity.
-This is equivalent to this [step](#add-identity-for-egi-authentication)
+This is equivalent to this [step](#first-time-add-identity).
 
 ### Run rucio client image and enter bash
 
