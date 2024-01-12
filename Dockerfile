@@ -21,8 +21,9 @@ COPY ./data-kit-edu-rockylinux9.repo /etc/yum.repos.d/data-kit-edu-rockylinux9.r
 RUN yum install -y oidc-agent oidc-agent-cli
 
 # add files
-COPY ./getToken.sh /root/getToken.sh
-COPY ./addIdentity.sh /root/addIdentity.sh
+COPY ./get-token.sh /root/get-token.sh
+COPY ./add-egi.sh /root/add-egi.sh
+COPY ./setup.sh /root/setup.sh
 COPY ./rucio.cfg /root/rucio.cfg
 
 COPY ./virgo.voms /root/virgo.voms
@@ -33,5 +34,5 @@ ENV OIDC_SOCK=/tmp/oidc-forward
 ENV RUCIO_CONFIG=/root/rucio.cfg
 
 WORKDIR /root/
-RUN ./addIdentity.sh
+RUN ./add-egi.sh
 
