@@ -25,7 +25,7 @@ You will need to:
 ```
 - [oidc-agent documentation](https://indigo-dc.gitbook.io/oidc-agent/)
 
-### Get openid token and setup env
+### Get token
 
 - If egi account is correctly setup, you can just run:
 ```
