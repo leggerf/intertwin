@@ -2,6 +2,13 @@
 
 ## Access Intertwin resources through EGI authentication
 
+First of all, clone this repo:
+
+```
+git clone git@github.com:leggerf/intertwin.git
+cd intertwin
+```
+
 You will need to:
 
 - [install the oidc-agent](#install-oidc-agent) if it is not available in your system. **NB:** with Ubuntu based distros you cannot install/use gfal commands. Might be better to use [docker image](#use-docker-image) if docker is available on your system. 
