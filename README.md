@@ -27,7 +27,7 @@ You will need to:
 
 ### Get token
 
-- If egi account is correctly setup, you can just run:
+- If the egi account is correctly setup, you can just run:
 ```
 source ./get-token.sh
 ```
@@ -58,7 +58,7 @@ This is equivalent to this [step](#first-time-add-identity).
 ./run.sh
 ```
 
--  [get the token](#get-openid-token-and-setup-env) to use rucio and gfal commands 
+-  [get the token](#get-token) to use rucio and gfal commands 
 
 ## Access Virgo resources
 
