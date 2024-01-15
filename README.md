@@ -13,19 +13,17 @@ You will need to:
 
 - [install the oidc-agent](#install-oidc-agent) if it is not available in your system. **NB:** with Ubuntu based distros you cannot install/use gfal commands. Might be better to use [docker image](#use-docker-image) if docker is available on your system. 
 - [first time setup](#first-time-add-identity): create your egi identity for authentication
-- get valid token
-
-
+- [get valid token](#get-token)
 
 ### Setup oidc account
 
-### First time: Add identity
+### First time: add identity
 
 - add *egi* identity with [add-egi.sh](./add-egi.sh) (**NB**  the hardcoded encryption password is "intertwin")
 ```
 ./add-egi.sh
 ```
-- [Documentation](https://indigo-dc.gitbook.io/oidc-agent/)
+- [oidc-agent documentation](https://indigo-dc.gitbook.io/oidc-agent/)
 
 ### Get openid token and setup env
 
