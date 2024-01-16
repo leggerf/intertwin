@@ -4,7 +4,7 @@ wget -nc https://repository.egi.eu/sw/production/cas/1/current/repo-files/egi-tr
 cp $HOME/.globus/usercert.pem .
 cp $HOME/.globus/userkey.pem .
 
-docker build --tag rucio-intertwin .
+docker build --progress plain --tag rucio-intertwin .
 
 rm -f usercert.pem
 rm -f userkey.pem

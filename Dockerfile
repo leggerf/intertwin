@@ -36,5 +36,6 @@ ENV RUCIO_CONFIG=/root/rucio.cfg
 ENV OIDC_ENCRYPTION_PW=intertwin
 
 WORKDIR /root/
+RUN oidc-agent --version
 RUN ./add-egi.sh
 
