@@ -23,6 +23,7 @@ RUN yum install -y oidc-agent oidc-agent-cli
 # add files
 COPY ./get-token.sh /root/get-token.sh
 COPY ./add-egi.sh /root/add-egi.sh
+COPY ./refresh-egi.sh /root/refresh-egi.sh
 COPY ./delete-egi.sh /root/delete-egi.sh
 COPY ./setup.sh /root/setup.sh
 COPY ./rucio.cfg /root/rucio.cfg
