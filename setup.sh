@@ -17,4 +17,6 @@ export OIDC_ENCRYPTION_PW="intertwin"
 
 export RUCIO_CONFIG="$PWD/rucio.cfg"
 
-
+unset X509_CERT_DIR    
+unset X509_USER_CERT   
+unset X509_USER_KEY 
