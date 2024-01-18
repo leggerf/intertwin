@@ -13,7 +13,7 @@ source ./setup.sh
 
 oidc-add egi --pw-env 
 
-export BEARER_TOKEN="$(oidc-token egi --time 3600 --scope 'openid profile offline_access eduperson_entitlement')"
+export BEARER_TOKEN="$(oidc-token --aud=rucio-testbed egi --time 3600 --scope 'openid profile offline_access eduperson_entitlement')"
 export EXPIRES_AT="$(date -d @$(oidc-token egi --expires-at))"
 
 # SETUP for Rucio
