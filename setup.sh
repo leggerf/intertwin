@@ -18,6 +18,7 @@ export OIDC_ENCRYPTION_PW="intertwin"
 export RUCIO_CONFIG="$PWD/rucio.cfg"
 
 # get rid of x509 authentication, will conflict with tokens
+echo "Destroying voms proxy if existing"
 voms-proxy-destroy
 unset X509_CERT_DIR    
 unset X509_USER_CERT   
