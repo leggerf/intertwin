@@ -83,7 +83,7 @@ voms-proxy-init -voms virgo --vomses virgo.voms
 
 If oidc-agent commands are not available on your system, you need to install them. See [instructions](http://repo.data.kit.edu/) 
 
-For apt-get based distributions like Ubuntu, add repo from KIT
+For apt-get based distributions like Ubuntu, add key from KIT
 ```
 sudo su
 curl repo.data.kit.edu/repo-data-kit-edu-key.gpg  | gpg --dearmor > /etc/apt/trusted.gpg.d/kitrepo-archive.gpg
@@ -94,7 +94,7 @@ vi /etc/apt/sources.list
 apt-get update
 ```
 
-For RockyLinux/alma run something like (check  [instructions](http://repo.data.kit.edu/) for precise syntax)
+For Centos/RockyLinux/alma run something like (check  [instructions](http://repo.data.kit.edu/) for precise syntax for your Linux distro)
  ```
 cd /etc/yum.repos.d; wget https://repo.data.kit.edu//data-kit-edu-rockylinux9.repo
 ```
