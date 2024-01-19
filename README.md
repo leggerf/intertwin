@@ -15,7 +15,9 @@ You will need to:
 - [first time setup](#first-time-add-identity): create your egi identity for authentication
 - [get valid token](#get-token)
 
-### Setup oidc account
+## Setup oidc account
+
+- [oidc-agent documentation](https://indigo-dc.gitbook.io/oidc-agent/)
 
 ### First time: add identity
 
@@ -23,7 +25,13 @@ You will need to:
 ```
 ./add-egi.sh
 ```
-- [oidc-agent documentation](https://indigo-dc.gitbook.io/oidc-agent/)
+
+### Refresh token
+
+- If the egi refresh token is expired, you can just run:
+```
+source ./refresh-token.sh
+```
 
 ### Get token
 
