@@ -23,3 +23,6 @@ voms-proxy-destroy
 unset X509_CERT_DIR    
 unset X509_USER_CERT   
 unset X509_USER_KEY 
+
+#enable debug mode
+#export XRD_LOGLEVEL=Debug
