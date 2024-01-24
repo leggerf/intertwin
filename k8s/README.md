@@ -3,6 +3,6 @@
 ## To access the k8s cluster at CNAF
 
 ```
-source ./setup-k8s
+source ./setup-k8s.sh
 ```
 
