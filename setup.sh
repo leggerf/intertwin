@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 ### run with: source ./setup.sh
 ###

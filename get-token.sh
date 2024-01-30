@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 ### run with: source ./getToken.sh
 ###
@@ -19,7 +19,7 @@ export EXPIRES_AT="$(date -d @$(oidc-token egi --expires-at))"
 # SETUP for Rucio
 
 echo $BEARER_TOKEN | tr -cd '[:print:]' > /tmp/rucio.tkn
-cat /tmp/rucio.tkn
+#cat /tmp/rucio.tkn
 
 printf "\n\nExpires at $EXPIRES_AT"
 
