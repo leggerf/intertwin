@@ -28,8 +28,11 @@ kafka                  Active   5d21h
 k get pods -n airflow
 ```
 
-To see the Airflow dashboard, do ```kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow```
-and go to [http://localhost:8080/](http://localhost:8080/) (admin/admin)
+- to see the Airflow dashboard, do ```kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow``` or
+```
+source ./setup-port.sh
+```
+- go to [http://localhost:8080/](http://localhost:8080/) (admin/admin)
 
 DAGs are kept in Intertwin [GH repo](https://github.com/interTwin-eu/DT-Virgo-dags)
 
