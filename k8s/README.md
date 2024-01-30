@@ -50,3 +50,10 @@ kubectl create secret generic dockerhub \
     --from-file=.dockerconfigjson=~/.docker/config.json \
     --type=kubernetes.io/dockerconfigjson
 ```
+- test pod creation with
+```
+kubectl apply -f test.yaml 
+pod/test created
+k get pods
+```
+
