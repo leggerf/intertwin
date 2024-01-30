@@ -37,10 +37,16 @@ DAGs are kept in Intertwin [GH repo](https://github.com/interTwin-eu/DT-Virgo-da
 
 - to use images in Airflow, you need to push them in dockerhub.
 - first, create a private repository on dockerhub (private because it stores your EGI token)
-- then login to dockerhub on your machine ```docker login```
+- then login to dockerhub on your machine ```docker login```. This creates a file with your authentication credentials in ```~/.docker/config.json```
 - build your image
 ```
 TAG=0.0.0
 docker image tag rucio-intertwin leggerf/rucio-intertwin:$TAG
 docker push leggerf/rucio-intertwin:$TAG
+```
+- add secret to k8s
+```
+kubectl create secret generic dockerhub \
+    --from-file=.dockerconfigjson=~/.docker/config.json \
+    --type=kubernetes.io/dockerconfigjson
 ```
