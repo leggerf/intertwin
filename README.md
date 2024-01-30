@@ -60,6 +60,14 @@ rucio list-rses
 In the last build step you need to follow the instructions to setup you egi identity.
 This is equivalent to this [step](#first-time-add-identity).
 
+### Push docker image to dockerhub
+
+```
+./push.sh
+```
+This script pushes to my private repo in [dockerhub](https://hub.docker.com/repository/docker/leggerf/rucio-intertwin/general). 
+More [details](k8s#images-in-dockerhub).
+
 ### Run rucio client image and enter bash
 
 ```
