@@ -28,14 +28,17 @@ kafka                  Active   5d21h
 k get pods -n airflow
 ```
 
-To see the Airflow dashboard, do ```kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow```
-and go to [http://localhost:8080/](http://localhost:8080/) (admin/admin)
+- to see the Airflow dashboard, do ```kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow``` or
+```
+source ./setup-port.sh
+```
+- go to [http://localhost:8080/](http://localhost:8080/) (admin/admin)
 
 DAGs are kept in Intertwin [GH repo](https://github.com/interTwin-eu/DT-Virgo-dags)
 
 ## Images in dockerhub
 
-- to use images in Airflow, you need to push them in dockerhub.
+- to use images in k8s, you need to push them in dockerhub.
 - first, create a private repository on dockerhub (private because it stores your EGI token)
 - then login to dockerhub on your machine ```docker login```. This creates a file with your authentication credentials in ```~/.docker/config.json```
 - build your image
