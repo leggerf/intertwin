@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test
+spec:
+  containers:
+  - name: test-rucio-intertwin
+    image: leggerf/rucio-intertwin:0.0.0
+  imagePullSecrets:
+  - name: dockerhub
