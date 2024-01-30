@@ -32,3 +32,15 @@ To see the Airflow dashboard, do ```kubectl port-forward svc/airflow-webserver 8
 and go to [http://localhost:8080/](http://localhost:8080/) (admin/admin)
 
 DAGs are kept in Intertwin [GH repo](https://github.com/interTwin-eu/DT-Virgo-dags)
+
+## Images in dockerhub
+
+- to use images in Airflow, you need to push them in dockerhub.
+- first, create a private repository on dockerhub (private because it stores your EGI token)
+- then login to dockerhub on your machine ```docker login```
+- build your image
+```
+TAG=0.0.0
+docker image tag rucio-intertwin leggerf/rucio-intertwin:$TAG
+docker push leggerf/rucio-intertwin:$TAG
+```
