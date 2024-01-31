@@ -40,7 +40,7 @@ DAGs are kept in Intertwin [GH repo](https://github.com/interTwin-eu/DT-Virgo-da
 
 - to use images in k8s, you need to push them in dockerhub.
 - first, create a private repository on dockerhub (private because it stores your EGI token)
-- then login to dockerhub on your machine ```docker login```. This creates a file with your authentication credentials in ```~/.docker/config.json```
+- then login to dockerhub on your machine ```docker login docker.io```. This creates a file with your authentication credentials in ```~/.docker/config.json```
 - build your image
 ```
 TAG=0.0.0
