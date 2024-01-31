@@ -65,7 +65,7 @@ This is equivalent to this [step](#first-time-add-identity).
 ```
 ./push.sh
 ```
-This script pushes to my private repo in [dockerhub](https://hub.docker.com/repository/docker/leggerf/rucio-intertwin/general). 
+This script pushes to my private repo in [dockerhub](https://hub.docker.com/repository/docker/leggerf/rucio-intertwin/general). Remember to login to dockerhub on your machine ```docker login docker.io```.
 More [details](k8s#images-in-dockerhub).
 
 ### Run rucio client image and enter bash
