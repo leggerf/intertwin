@@ -39,7 +39,7 @@ source ./setup-port.sh
 - go to [http://localhost:8080/](http://localhost:8080/) (admin/admin)
 
 - DAGs are kept in Intertwin [GH repo](https://github.com/interTwin-eu/DT-Virgo-dags)
-- Currently image pull in airflow does not work. To pull images to all nodes you need [this](pull-images)
+- Currently image pull in airflow does not work. To pull images to all nodes you need [this](#pull-images)
 
 ## Images in dockerhub
 
