@@ -52,11 +52,11 @@ TAG=0.0.0
 docker image tag rucio-intertwin leggerf/rucio-intertwin:$TAG
 docker push leggerf/rucio-intertwin:$TAG
 ```
-- add secret to k8s
+- add secret to k8s (change namespace if needed)
 ```
 kubectl create secret generic dockerhub \
     --from-file=.dockerconfigjson=~/.docker/config.json \
-    --type=kubernetes.io/dockerconfigjson
+    --type=kubernetes.io/dockerconfigjson --namespace airflow
 ```
 - test image pull with
 ```
