@@ -1,6 +1,8 @@
 # has installed oidc client
-FROM docker.io/dvrbanec/rucio-client:latest   
+
+#FROM docker.io/dvrbanec/rucio-client:latest   
 #FROM docker.io/rucio/rucio-clients:release-33.0.0 # cannot install oidc client on rootless docker
+FROM docker.io/apache/airflow:2.7.1
 
 USER root
 
@@ -8,6 +10,9 @@ USER root
 
 # install gfal
 RUN yum install -y python3-gfal2 gfal2-plugin-file gfal2-plugin-gridftp gfal2-plugin-http gfal2-plugin-srm gfal2-plugin-xrootd xrootd-client gfal2-util
+
+# install rucio-client
+RUN pip install rucio-clients:33.4.0
 
 # install voms-proxy
 RUN yum install -y voms-clients
@@ -32,15 +37,15 @@ USER airflow
 WORKDIR /home/airflow
 
 # add files
-COPY ./get-token.sh /home/airflow/get-token.sh
-COPY ./add-egi.sh /home/airflow/add-egi.sh
-COPY ./refresh-egi.sh /home/airflow/refresh-egi.sh
-COPY ./delete-egi.sh /home/airflow/delete-egi.sh
+COPY ../get-token.sh /home/airflow/get-token.sh
+COPY ../add-egi.sh /home/airflow/add-egi.sh
+COPY ../refresh-egi.sh /home/airflow/refresh-egi.sh
+COPY ../delete-egi.sh /home/airflow/delete-egi.sh
 COPY ./setup.sh /home/airflow/setup.sh
-COPY ./rucio.cfg /home/airflow/rucio.cfg
+COPY ../rucio.cfg /home/airflow/rucio.cfg
 
 # add my certificates
-COPY ./virgo.voms /home/airflow/virgo.voms
+COPY ../virgo.voms /home/airflow/virgo.voms
 #COPY ./usercert.pem /home/airflow/.globus/usercert.pem
 #COPY ./userkey.pem /home/airflow/.globus/userkey.pem
 

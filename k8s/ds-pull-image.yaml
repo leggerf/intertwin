@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: ds-pull-image
+spec:
+  selector:
+    matchLabels:
+      name: ds-pull-image
+  template:
+    metadata:
+      labels:
+        name: ds-pull-image
+    spec:
+      containers:
+      - name: pull-rucio-intertwin
+        image: leggerf/rucio-intertwin:0.0.0
+        imagePullPolicy: Always
+        #command: ['pwd']
+        command: ['./get-token.sh']
+      imagePullSecrets:
+      - name: dockerhub
