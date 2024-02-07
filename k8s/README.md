@@ -39,7 +39,7 @@ source ./setup-port.sh
 - go to [http://localhost:8080/](http://localhost:8080/) (admin/admin)
 
 - DAGs are kept in Intertwin [GH repo](https://github.com/interTwin-eu/DT-Virgo-dags)
-- Currently image pull from private repo in airflow does not work. To pull images to all nodes you need [this](#pull-images)
+- To automatically pull images to all nodes you may do [this](#pull-images)
 
 ## Images in dockerhub
 
@@ -68,6 +68,6 @@ k logs pull-image
 
 ### Pull images
 
-- to automatically pull docker images to all nodes in the cluster, we use daemonsets.
+- to automatically pull docker images to all nodes in the cluster, you can use daemonsets.
 - ```k apply -f ds-pull-images.yaml```
-- pods can be cleaned with the ```delete-pods.sh``` [script](#remove-pods)
+- to trigger a new pull, delete old pods with the ```delete-pods.sh``` [script](#remove-pods) (remember to edit namespace/substring accordingly).
