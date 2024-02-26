@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: ds-pull-image
+  namespace: pull-image
 spec:
   selector:
     matchLabels:

@@ -1,8 +1,7 @@
 # has installed oidc client
 
-#FROM docker.io/dvrbanec/rucio-client:latest   
+FROM docker.io/dvrbanec/rucio-client:latest   
 #FROM docker.io/rucio/rucio-clients:release-33.0.0 # cannot install oidc client on rootless docker
-FROM docker.io/apache/airflow:2.7.1
 
 USER root
 
@@ -10,9 +9,6 @@ USER root
 
 # install gfal
 RUN yum install -y python3-gfal2 gfal2-plugin-file gfal2-plugin-gridftp gfal2-plugin-http gfal2-plugin-srm gfal2-plugin-xrootd xrootd-client gfal2-util
-
-# install rucio-client
-RUN pip install rucio-clients:33.4.0
 
 # install voms-proxy
 RUN yum install -y voms-clients
@@ -30,7 +26,7 @@ RUN chmod -R ug+rwX /opt/rucio/etc
 
 # Create airflow user and put it in root group
 
-RUN useradd -ms /bin/bash airflow
+RUN useradd -ms /bin/bash -u 50000 airflow
 RUN usermod -aG wheel airflow
 
 USER airflow

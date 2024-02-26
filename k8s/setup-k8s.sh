@@ -1,1 +1,1 @@
-export KUBECONFIG="kubeconfig-demo.yaml"
+export KUBECONFIG="$PWD/kubeconfig-demo.yaml"

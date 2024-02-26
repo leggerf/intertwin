@@ -1,10 +1,10 @@
 # delete pods based on substring and namespace
 
-#MATCH=data
-#NS=airflow
+MATCH=task
+NS=airflow
 
-MATCH=image
-NS=default
+#MATCH=image
+#NS=default
 
 
 kubectl get pod -n $NS | grep $MATCH
